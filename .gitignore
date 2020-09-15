@@ -1,0 +1,4 @@
+udagram-deployment/k8s/aws-secret.yaml
+udagram-deployment/k8s/env-configmap.yaml
+udagram-deployment/k8s/env-secret.yaml
+set_env.sh
