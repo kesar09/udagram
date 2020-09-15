@@ -6,8 +6,8 @@ services:
     image: kesar09/udagram-deployment
   backend_user:
     build:
-      context: ../../udagram-api-user
-    image: kesar09/udagram-api-user
+      context: ../../udagram-api-users
+    image: kesar09/udagram-api-users
   backend_feed:
     build:
       context: ../../udagram-api-feed  
