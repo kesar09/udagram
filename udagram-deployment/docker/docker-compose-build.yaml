@@ -6,12 +6,12 @@ services:
     image: kesar09/udagram-deployment
   backend_user:
     build:
-      context: ../../udagram-restapi-user
-    image: kesar09/udagram-restapi-user
+      context: ../../udagram-api-user
+    image: kesar09/udagram-api-user
   backend_feed:
     build:
-      context: ../../udagram-restapi-feed  
-    image: kesar09/udagram-restapi-feed
+      context: ../../udagram-api-feed  
+    image: kesar09/udagram-api-feed
   frontend:
     build:
       context: ../../udagram-frontend  

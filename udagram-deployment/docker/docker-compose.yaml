@@ -4,12 +4,12 @@ services:
       image: kesar09/udagram-deployment
       ports:
           - 8080:8080
-      restart: always
+      art: always
       depends_on:
         - backend-user
         - backend-feed     
   backend-user:
-    image: kesar09/udagram-restapi-user
+    image: kesar09/udagram-api-user
     environment:
       POSTGRESS_USERNAME: $POSTGRESS_USERNAME
       POSTGRESS_PASSWORD: $POSTGRESS_PASSWORD 
@@ -21,7 +21,7 @@ services:
       JWT_SECRET: $JWT_SECRET
       URL: "http://localhost:8100"
   backend-feed:
-    image: kesar09/udagram-restapi-feed
+    image: kesar09/udagram-api-feed
     volumes:
       - $HOME/.aws:/root/.aws
     environment:

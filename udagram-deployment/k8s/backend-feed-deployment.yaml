@@ -12,7 +12,7 @@ spec:
         service: backend-feed
     spec:
       containers:
-      - image: kesar09/udagram-restapi-feed
+      - image: kesar09/udagram-api-feed
         name: backend-feed
         imagePullPolicy: Always  
         resources:
@@ -72,7 +72,7 @@ spec:
         - name: aws-secret
           mountPath: "/root/.aws/"
           readOnly: true        
-      restartPolicy: Always
+      artPolicy: Always
       volumes:
       - name: aws-secret
         secret:

@@ -12,7 +12,7 @@ spec:
         service: backend-user
     spec:
       containers:
-      - image: kesar09/udagram-restapi-user
+      - image: kesar09/udagram-api-user
         name: backend-user 
         imagePullPolicy: Always  
         resources:
@@ -53,6 +53,6 @@ spec:
             secretKeyRef:
               name: env-secret
               key: POSTGRESS_USERNAME
-      restartPolicy: Always
+      artPolicy: Always
 
 
