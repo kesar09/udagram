@@ -23,7 +23,7 @@ install:
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker image push kesa09/udagram-deployment
+  - docker image push kesar09/udagram-deployment
   - docker image push kesar09/udagram-api-feed
   - docker image push kesar09/udagram-api-users
   - docker image push kesar09/udagram-frontend
