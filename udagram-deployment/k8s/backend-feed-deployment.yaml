@@ -1,11 +1,14 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
     service: backend-feed
   name: backend-feed
 spec:
-  replicas: 3
+  replicas: 1
+  selector:
+    matchLabels:
+      service: backend-feed
   template:
     metadata:
       labels:
@@ -67,13 +70,4 @@ spec:
           valueFrom:
             secretKeyRef:
               name: env-secret
-              key: POSTGRESS_USERNAME      
-        volumeMounts:
-        - name: aws-secret
-          mountPath: "/root/.aws/"
-          readOnly: true        
-      artPolicy: Always
-      volumes:
-      - name: aws-secret
-        secret:
-          secretName: aws-secret       
+              key: POSTGRESS_USERNAME            
